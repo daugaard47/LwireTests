@@ -3,3 +3,37 @@
 @tailwind components;
 
 @tailwind utilities;
+.z99 {
+    z-index: 9999;
+}
+.pin-c-x {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pin-c-y {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pin-b {
+    bottom: 0%;
+    transform: translateY(-0%);
+}
+
+.pin-c {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+.pin-t-c {
+    top: 0;
+    left: 50%;
+    transform: translate3d(0, -50%, 0);
+}
+
+.pin-b-c {
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+}

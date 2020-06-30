@@ -1,10 +1,7 @@
 <div>
-    <div class="w-full p-6">
-        @if(session()->has('message'))
-            <div class="alert alert-success">
-                {{ session('message') }}
-            </div>
-        @endif
+
+    <div class="w-full p-6 relative">
+        @include('layouts.flash-message')
         <livewire:post-create/>
     </div>
 

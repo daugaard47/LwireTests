@@ -20,7 +20,7 @@ class PostIndex extends Component {
 
     public function postAdded($postId)
     {
-        session()->flash('message', 'Your post was added');
+        session()->flash('success', 'Your post was added');
     }
 
     public function render()
