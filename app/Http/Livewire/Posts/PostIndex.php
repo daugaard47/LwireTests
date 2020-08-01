@@ -26,7 +26,7 @@ class PostIndex extends Component {
     public function render()
     {
         return view('livewire.posts.post-index', [
-            'posts' => Post::latest()->paginate(3)
+            'posts' => Post::latest()->paginate(5)
         ]);
     }
     public function setPage($url) {

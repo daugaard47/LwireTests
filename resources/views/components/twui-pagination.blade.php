@@ -1,3 +1,4 @@
+<div>
 @if ($paginator->hasPages())
     <nav class="border-t border-gray-200 px-4 flex items-center justify-between sm:px-0">
         {{-- Previous Page Link --}}
@@ -75,6 +76,6 @@
                 </a>
             </div>
             @endif
-            </div>
     </nav>
 @endif
+</div>

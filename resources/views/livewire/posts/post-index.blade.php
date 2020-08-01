@@ -1,7 +1,7 @@
 <div>
 
     <div class="w-full p-6 relative">
-        @include('layouts.flash-message')
+        <x-flash.flash-messages/>
         <livewire:posts.post-create/>
     </div>
 

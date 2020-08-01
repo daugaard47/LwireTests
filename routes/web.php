@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-
+Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 
@@ -22,4 +22,4 @@ Route::get('/posts', 'Posts\PostsController@index')->name('posts');
 
 Route::get('/multi-step', 'MultiStep\MultiStepController@index')->name('multi-step');
 
-Auth::routes();
+
