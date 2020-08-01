@@ -2,18 +2,18 @@
     <div class="max-w-lg mx-auto lg:max-w-none">
         <form action="#" method="POST" class="grid grid-cols-1 row-gap-6">
             <div>
-                <label for="pet_name" class="sr-only">Pet name</label>
-                <label for="pet_name" class="block text-sm leading-5 font-medium text-gray-700">Pet name</label>
+                <label for="pet_name" class="sr-only">Pet Name</label>
+                <label for="pet_name" class="block text-sm leading-5 font-medium text-gray-700">Pet Name</label>
                 <div class="relative rounded-md shadow-sm">
-                    <input id="full_name"
-                           class="mt-1 form-input block w-full py-2 px-4 placeholder-gray-500 transition ease-in-out duration-150"
-                           placeholder="Full name">
+                    <input id="pet_name"
+                           class="mt-1 form-input block w-full py-2 px-4 placeholder-gray-500 transition ease-in-out duration-150">
                 </div>
             </div>
             <div>
                 <fieldset class="sm:col-span-2">
+                    <label for="pet_type" class="sr-only">Pet Type</label>
                     <legend class="block text-sm leading-5 font-medium text-gray-700">
-                        Pick one:
+                        Pet Type:
                     </legend>
                     <div class="mt-4 grid grid-cols-1 row-gap-4">
                         <div class="flex items-center">
@@ -41,9 +41,9 @@
                 </select>
             </div>
             <div>
-                <label for="size" class="sr-only">Size</label>
-                <label for="size" class="block text-sm leading-5 font-medium text-gray-700">Size</label>
-                <select id="size" class="mt-1 form-select block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5">
+                <label for="pet_size" class="sr-only">Pet Size</label>
+                <label for="pet_size" class="block text-sm leading-5 font-medium text-gray-700">Pet Size</label>
+                <select id="pet_size" class="mt-1 form-select block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5">
                     <option selected disabled>Pick one</option>
                     <option>Small</option>
                     <option>Medium</option>
