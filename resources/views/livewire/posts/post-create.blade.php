@@ -1,5 +1,7 @@
 <div>
+
 <form wire:submit.prevent="addPost">
+
 
     <div class="w-full mb-4">
         <label for="title" class="block text-sm font-medium leading-5 text-gray-700">
@@ -27,6 +29,7 @@
         </div>
     </div>
 
+
     <div class="w-full mb-4">
         <label for="body" class="block text-sm font-medium leading-5 text-gray-700">
             Body
@@ -52,6 +55,7 @@
             @enderror
         </div>
     </div>
+
     <div class="flex justify-end mb-4">
         <button type="submit" class="rounded py-3 px-4 bg-green-500 hover:bg-green-400 text-white">
             Submit
@@ -59,5 +63,5 @@
     </div>
 </form>
 </div>
+</div>
 
-{{--border-red-300 text-red-900 focus:border-red-300 focus:shadow-outline-red--}}

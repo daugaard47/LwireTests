@@ -13,15 +13,20 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     @livewireStyles
 </head>
-<body class="bg-gray-100 h-screen antialiased leading-none">
+<body class="bg-gray-800 h-screen antialiased leading-none">
     <div id="app">
-        <nav class="bg-blue-900 shadow mb-8 py-6">
+        <nav class="bg-gray-900 shadow mb-8 py-6">
             <div class="container mx-auto px-6 md:px-0">
                 <div class="flex items-center justify-center">
                     <div class="mr-6">
                         <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 no-underline">
                             {{ config('app.name', 'Laravel') }}
                         </a>
+                    </div>
+                    <div class="space-x-6 flex justify-start">
+                        <div><a href="{{ route('home') }}" class="text-white">Home</a></div>
+                        <div><a href="{{ route('posts') }}" class="text-white">Posts</a></div>
+                        <div><a href="{{ route('multi-step') }}" class="text-white">MultiStep Form</a></div>
                     </div>
                     <div class="flex-1 text-right">
                         @guest

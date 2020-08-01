@@ -1,0 +1,13 @@
+<?php
+
+namespace App\Http\Livewire\MultiStep;
+
+use Livewire\Component;
+
+class MultiStep extends Component
+{
+    public function render()
+    {
+        return view('livewire.multi-step.multi-step');
+    }
+}

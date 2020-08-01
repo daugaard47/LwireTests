@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Posts;
 
 use App\Post;
 use Illuminate\Pagination\Paginator;
@@ -25,7 +25,7 @@ class PostIndex extends Component {
 
     public function render()
     {
-        return view('livewire.post-index', [
+        return view('livewire.posts.post-index', [
             'posts' => Post::latest()->paginate(3)
         ]);
     }

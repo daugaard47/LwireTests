@@ -2,7 +2,7 @@
 
     <div class="w-full p-6 relative">
         @include('layouts.flash-message')
-        <livewire:post-create/>
+        <livewire:posts.post-create/>
     </div>
 
     <hr>
@@ -12,7 +12,7 @@
         </h2>
         <ul>
             @foreach($posts as $post)
-                <livewire:post-single :post="$post" :key="$post->id"/>
+                <livewire:posts.post-single :post="$post" :key="$post->id"/>
             @endforeach
         </ul>
     </div>

@@ -13,10 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/posts', 'Posts\PostsController@index')->name('posts');
+
+Route::get('/multi-step', 'MultiStep\MultiStepController@index')->name('multi-step');
+
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-

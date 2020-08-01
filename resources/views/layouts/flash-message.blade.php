@@ -21,6 +21,7 @@
                     <div class="mt-4">
                         <div class="-mx-2 -my-1.5 flex">
                             <button type="button" data-dismiss="alert" aria-label="Dismiss"
+                                    @click.away="isOpen = !isOpen"
                                     class="px-2 py-1.5 rounded text-sm leading-5 font-medium text-green-900 bg-green-200 hover:bg-green-300 focus:outline-none focus:bg-green-200 transition ease-in-out duration-150">
                                 Dismiss
                             </button>

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Posts;
 
 use Livewire\Component;
 
@@ -13,6 +13,6 @@ class PostSingle extends Component
     }
     public function render()
     {
-        return view('livewire.post-single');
+        return view('livewire.posts.post-single');
     }
 }
