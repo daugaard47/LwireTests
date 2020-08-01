@@ -55,13 +55,12 @@
             {{--STEP 3--}}
             @if($step == 2)
             <div>
-                <label for="pet_gender" class="sr-only">Gender</label>
                 <label for="pet_gender" class="block text-sm leading-5 font-medium text-gray-700">Gender</label>
-                <select id="pet_gender" wire:model="pet_gender"
+                <select wire:model="pet_gender"
                         class="mt-1 form-select block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5">
-                    <option selected disabled>Pick one</option>
-                    <option>Male</option>
-                    <option>Female</option>
+                    <option selected><span class="disabled">Pick one</span></option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
                 </select>
                 @error('pet_gender')
                 <p class="text-sm text-red-700 mt-1">{{ $message }}</p>
@@ -78,10 +77,12 @@
                     <select id="pet_size" wire:model.lazy="pet_size"
                             class="mt-1 form-select block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5">
                         <option selected disabled>Pick one</option>
-                        <option>Small</option>
-                        <option>Medium</option>
-                        <option>Large</option>
-                        <option>Xtra Large</option>
+                        <option value="xs">Tiny</option>
+                        <option value="sm">Small</option>
+                        <option value="med">Medium</option>
+                        <option value="lg">Large</option>
+                        <option value="xl">Xtra Large</option>
+                        <option value="2xl">Huge</option>
                     </select>
                     @error('pet_size')
                     <p class="text-sm text-red-700 mt-1">{{ $message }}</p>
@@ -93,7 +94,8 @@
             {{--STEP 5 Review--}}
             @if($step == 4)
                 <div>
-                    <div class="block text-sm leading-5 font-medium text-gray-700">Review</div>
+                    <div class="prose">
+                    <h2 class="block text-sm leading-5 font-medium text-gray-700">Review</h2>
                     <p class="text-base">
                         Does this look correct? If so, please Submit.
                     </p>
@@ -111,6 +113,21 @@
                             Pet Size: {{ $pet_size }}
                         </li>
                     </ul>
+                </div>
+                </div>
+            @endif
+
+            @if($step == 5)
+                <div>
+                    <div class="prose">
+                    <h2 class="block text-2xl leading-5 font-bold text-gray-700">Okay. {{ $pet_name }} is all set!</h2>
+                    <p class="text-xl">
+                        You're package is on it's way.
+                    </p>
+                    <p class="text-base">
+                        Return back to the beginning if you would like to get another subscription for another pet.
+                    </p>
+                    </div>
                 </div>
             @endif
             {{--/STEP 5/--}}
