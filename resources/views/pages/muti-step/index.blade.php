@@ -7,7 +7,7 @@
                     MultiStep Form
                 </div>
                 <div class="w-full p-6 relative">
-                    Collection of Livewire practice components.
+                    <livewire:multi-step.multi-step/>
                 </div>
             </div>
         </div>
