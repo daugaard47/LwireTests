@@ -2,13 +2,15 @@
 
 namespace App\Http\Livewire\Posts;
 
-use App\Post;
+use App\Models\Post;
 use Illuminate\Pagination\Paginator;
 use Livewire\Component;
 use Livewire\WithPagination;
 
 class PostIndex extends Component {
     use WithPagination;
+
+    protected $pagination = 3;
 
     protected $listeners = [
         'postAdded'
@@ -26,7 +28,7 @@ class PostIndex extends Component {
     public function render()
     {
         return view('livewire.posts.post-index', [
-            'posts' => Post::latest()->paginate(5)
+            'posts' => Post::latest()->paginate(3)
         ]);
     }
     public function setPage($url) {

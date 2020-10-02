@@ -19,7 +19,7 @@
     <div>
         <div class="py-4 px-6">
             {{ $posts->appends(Request::except('page'))->links('components.twui-pagination') }}
-            {{--{{ $posts->links() }}--}}
+{{--            {{ $posts->links() }}--}}
         </div>
     </div>
 </div>

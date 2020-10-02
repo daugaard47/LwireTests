@@ -76,6 +76,7 @@
                 </a>
             </div>
             @endif
+
     </nav>
 @endif
 </div>

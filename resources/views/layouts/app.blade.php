@@ -27,6 +27,7 @@
                         <div><a href="{{ route('home') }}" class="text-white">Home</a></div>
                         <div><a href="{{ route('posts') }}" class="text-white">Posts</a></div>
                         <div><a href="{{ route('multi-step') }}" class="text-white">MultiStep Form</a></div>
+                        <div><a href="{{ route('msf') }}" class="text-white">MSF</a></div>
                     </div>
                     <div class="flex-1 text-right">
                         @guest
@@ -53,7 +54,8 @@
         @yield('content')
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
-    @yield('in-page-scripts')
+    @stack('scripts')
+
     @livewireScripts
 </body>
 </html>
