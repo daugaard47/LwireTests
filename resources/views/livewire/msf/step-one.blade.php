@@ -1,5 +1,5 @@
 <div>
-    <form action="">
+    <form action="#">
         <div class="text-gray-600 font-bold">Step One</div>
         <label for="pet_name" class="my-2 inline-flex">Pet Name</label>
         <input wire:model.defer="state.pet_name" type="text" class="border-2 rounded w-full p-2">
@@ -13,14 +13,11 @@
         </div>
     </form>
 </div>
+{{--@push('scripts')--}}
+{{--    <script>--}}
+{{--            console.log("The JS is working");--}}
+{{--    </script>--}}
+{{--@endpush--}}
 
-{{--
-Quickly test to see JS is working
-@push('scripts')
-    <script>
-            console.log("The JS is working");
-    </script>
-@endpush
---}}
 
 

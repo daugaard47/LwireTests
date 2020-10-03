@@ -21,7 +21,8 @@ class StepOne extends Component {
     public function submit() {
         $this->validate();
         $this->emit('goToStep', 2);
-        $this->emit('fire');
+        $this->dispatchBrowserEvent('fire-event');
+
     }
 
     public function render() {

@@ -11,6 +11,7 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    @stack('stripe-js')
     @livewireStyles
 </head>
 <body class="bg-gray-800 h-screen antialiased leading-none">
@@ -55,7 +56,7 @@
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
     @stack('scripts')
-
+    @stack('stripe-scripts')
     @livewireScripts
 </body>
 </html>

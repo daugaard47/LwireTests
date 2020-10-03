@@ -6,6 +6,7 @@ use Livewire\Component;
 
 class StepTwo extends Component
 {
+
     public $state = [];
     protected $rules = [
         'state.pet_type' => 'required'
@@ -13,15 +14,6 @@ class StepTwo extends Component
     protected $messages = [
         'state.pet_type.required' => 'Your pet\'s type is required.'
     ];
-
-//    protected $listeners = [
-//        'fire',
-//    ];
-
-
-
-
-
 
     public function updatedState(){
         //Merge Overall State
@@ -31,6 +23,7 @@ class StepTwo extends Component
     public function submit() {
         $this->validate();
         $this->emit('goToStep', 3);
+        $this->dispatchBrowserEvent('stripe-card');
     }
     public function render()
     {
