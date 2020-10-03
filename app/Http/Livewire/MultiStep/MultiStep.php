@@ -98,6 +98,7 @@ class MultiStep extends Component
         }elseif($this->pet_size == '2xl'){
             session()->flash('info', 'WOAH'.' '.$this->pet_name.' Sounds like a horse! '.$gender.' going to love out treats..');
         }
+        $this->dispatchBrowserEvent('show-card');
         $this->step++;
     }
 

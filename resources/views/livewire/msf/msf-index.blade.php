@@ -15,37 +15,39 @@
         })
     </script>
 @endpush
+@push('stripe-js')
+    <script src="https://js.stripe.com/v3/"></script>
+@endpush
 @push('stripe-scripts')
     <script>
-        window.addEventListener('stripe-card', event => {
-                const stripe = Stripe('pk_test_4T57ajkUvg1pj6BV2NoEWVII');
-                const elements = stripe.elements();
-                const cardElement = elements.create('card');
-                cardElement.mount('#card-element');
-                const cardHolderName = document.getElementById('card-holder-name');
-                const cardButton = document.getElementById('card-button');
-                const clientSecret = cardButton.dataset.secret;
+        window.addEventListener('stripe-card', (e) => {
+            const stripe = Stripe('pk_test_4T57ajkUvg1pj6BV2NoEWVII');
+            const elements = stripe.elements();
+            const cardElement = elements.create('card');
+            cardElement.mount('#card-element');
+            const cardHolderName = document.getElementById('card-holder-name');
+            const cardButton = document.getElementById('card-button');
+            const clientSecret = cardButton.dataset.secret;
 
-                cardButton.addEventListener('click', async (e) => {
-                    const {setupIntent, error} = await stripe.confirmCardSetup(
-                        clientSecret, {
-                            payment_method: {
-                                card: cardElement,
-                                billing_details: {name: cardHolderName.value}
-                            }
+            cardButton.addEventListener('click', async (e) => {
+                const {setupIntent, error} = await stripe.confirmCardSetup(
+                    clientSecret, {
+                        payment_method: {
+                            card: cardElement,
+                            billing_details: {name: cardHolderName.value}
                         }
-                    );
-                    if (error) {
-                        let errorWrapper = document.getElementById('error-wrapper')
-                        errorWrapper.textContent = error.error
-                        console.info(error)
-                    } else {
-                          console.info(setupIntent.payment_method)
-                    @this.set('paymentMethod', setupIntent.payment_method)
-                    @this.call('submit')
                     }
-                })
-            // console.log("Stripe Working");
-        })
+                );
+                if (error) {
+                    let errorWrapper = document.getElementById('error-wrapper')
+                    errorWrapper.textContent = error.error
+                    console.info(error)
+                } else {
+                    //   console.info(setupIntent.payment_method)
+                @this.set('paymentMethod', setupIntent.payment_method)
+                @this.call('submit')
+                }
+            });
+        });
     </script>
 @endpush
